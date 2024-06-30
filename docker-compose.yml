@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  backend:
+    build: ./activities-search-service
+    ports:
+      - '3000:3000'
+  frontend:
+    build: ./activities-client
+    ports:
+      - '3001:80'
+    stdin_open: true
+    tty: true

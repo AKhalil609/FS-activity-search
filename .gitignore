@@ -1,0 +1,7 @@
+# VSCode
+.vscode
+
+# Package Managers
+**/node_modules/
+
+**/dist
