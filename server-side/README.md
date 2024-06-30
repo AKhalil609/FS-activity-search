@@ -1,3 +1,4 @@
+
 # Activities Search Service
 
 ## Overview
@@ -35,26 +36,19 @@ This project is a web application that allows users to search for activities. It
 
 ### Steps
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-repo/activities-search.git
-   cd activities-search
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
 
    ```bash
    yarn install
    ```
 
-3. Build and run the application using Docker Compose:
+2. Build and run the application using Docker Compose:
 
    ```bash
    docker-compose up --build
    ```
 
-4. Alternatively, you can run the application locally without Docker:
+3. Alternatively, you can run the application locally without Docker:
 
    ```bash
    yarn start:dev
@@ -70,10 +64,13 @@ This project is a web application that allows users to search for activities. It
 
 ### Search Activities by Title
 
-- **URL**: /activities/search
+- **URL**: /activities
 - **Method**: GET
-- **Query Parameter**: title (string)
-- **Response**: List of activities that match the search title
+- **Query Parameters**: 
+  - `page` (number) - The page number (default: 1)
+  - `limit` (number) - The number of items per page (default: 10)
+  - `search` (string) - The search query for activity title
+- **Response**: Paginated list of activities that match the search title
 
 ## Running Tests
 
@@ -89,10 +86,10 @@ yarn test
 
 - **NestJS Framework**: Chosen for its modular architecture, ease of use, and scalability.
 - **File-based Data Storage**: Using JSON files (`activities.json` and `suppliers.json`) for simplicity. This can be replaced with a database in a production environment.
-- **Data Caching**: Data is loaded once during service initialization for simplicity and performance.
-- **API Endpoints**: Two endpoints are provided:
+- **ETags for Caching**: Implemented ETags to ensure efficient caching and reduce unnecessary data transfer.
+- **API Endpoints**: 
   - `/activities`: Fetches all activities along with supplier information.
-  - `/activities/search?title={title}`: Searches for activities by title.
+  - `/activities?search={search}&page={page}&limit={limit}`: Searches for activities by title with pagination support.
 
 ## Assumptions
 
@@ -104,5 +101,5 @@ yarn test
 
 - **Database Integration**: Replace JSON file storage with a database to handle dynamic data.
 - **Advanced Search**: Implement more advanced search functionality, including filtering by price, rating, and special offers.
-- **Pagination**: Add pagination to the API endpoints to handle large datasets.
-- **Authentication**: Implement authentication and authorization for secure access to the API.
+- **Improved Error Handling**: More comprehensive error handling and user feedback mechanisms.
+- **Security**: Implement authentication and authorization for secure access to the API.
