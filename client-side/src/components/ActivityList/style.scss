@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  .activity {
+    border: 1px solid $secondary-color;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: $card-background-color;
+    color: $card-text-color;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s forwards;
+    border-radius: 5px;
+
+    h3 {
+      margin-top: 0;
+      color: $tertiary-color;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

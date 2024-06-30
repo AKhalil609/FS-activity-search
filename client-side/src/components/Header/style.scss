@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.header {
+  background-color: $secondary-color;
+  color: $text-color;
+  padding: 20px;
+  border-bottom: 1px solid $tertiary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $tertiary-color;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+}

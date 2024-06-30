@@ -1,0 +1,21 @@
+@import './styles/variables';
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.no-activities {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+}

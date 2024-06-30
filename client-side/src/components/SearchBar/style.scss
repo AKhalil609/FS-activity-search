@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.search-bar {
+  margin: 20px 20px;
+  display: flex;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid $secondary-color;
+    background-color: $primary-color;
+    color: $text-color;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+      border-color: $tertiary-color;
+    }
+  }
+}
