@@ -20,22 +20,15 @@ This project is the frontend for the Activities Search application, built with R
 
 ### Installation
 
-1. Clone the repository:
+1. Ensure you have Docker and Docker Compose installed.
 
-   ```bash
-   git clone <repository-url>
-   cd activities-client
-   ```
-
-2. Ensure you have Docker and Docker Compose installed.
-
-3. Build and run the application using Docker Compose:
+2. Build and run the application using Docker Compose:
 
    ```bash
    docker-compose up --build
    ```
 
-4. Access the application at `http://localhost:3001`.
+3. Access the application at `http://localhost:3001`.
 
 ## Running the Application
 
