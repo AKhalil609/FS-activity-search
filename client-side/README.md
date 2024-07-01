@@ -1,4 +1,3 @@
-
 # Activities Client
 
 This project is the frontend for the Activities Search application, built with React and Vite, and served using Nginx. The application allows users to search for activities, displaying details such as title, price, rating, special offers, supplier name, and location.
@@ -22,6 +21,7 @@ This project is the frontend for the Activities Search application, built with R
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd activities-client
@@ -30,6 +30,7 @@ This project is the frontend for the Activities Search application, built with R
 2. Ensure you have Docker and Docker Compose installed.
 
 3. Build and run the application using Docker Compose:
+
    ```bash
    docker-compose up --build
    ```
@@ -41,11 +42,13 @@ This project is the frontend for the Activities Search application, built with R
 To run the application independently using Docker Compose:
 
 1. Navigate to the `activities-client` directory:
+
    ```bash
    cd activities-client
    ```
 
 2. Use Docker Compose to build and run the application:
+
    ```bash
    docker-compose up --build
    ```
@@ -53,6 +56,7 @@ To run the application independently using Docker Compose:
 3. The application will be accessible at `http://localhost:3001`.
 
 To stop the application, press `Ctrl+C` in the terminal where you ran the `docker-compose up` command, or run:
+
 ```bash
 docker-compose down
 ```

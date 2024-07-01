@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.scss';
 
 interface NotificationProps {
@@ -6,10 +5,7 @@ interface NotificationProps {
   onClose: () => void;
 }
 
-export const Notification: React.FC<NotificationProps> = ({
-  message,
-  onClose,
-}) => {
+export const Notification = ({ message, onClose }: NotificationProps) => {
   return (
     <aside className="notification" role="alert">
       <p>{message}</p>

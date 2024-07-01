@@ -22,14 +22,16 @@ export class ActivitiesService {
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
 
-    let filteredActivities = this.activities.map(activity => ({
+    let filteredActivities = this.activities.map((activity) => ({
       ...activity,
-      supplier: this.suppliers.find(supplier => supplier.id === activity.supplierId),
+      supplier: this.suppliers.find(
+        (supplier) => supplier.id === activity.supplierId,
+      ),
     }));
 
     if (search) {
-      filteredActivities = filteredActivities.filter(activity =>
-        activity.title.toLowerCase().includes(search.toLowerCase())
+      filteredActivities = filteredActivities.filter((activity) =>
+        activity.title.toLowerCase().includes(search.toLowerCase()),
       );
     }
 

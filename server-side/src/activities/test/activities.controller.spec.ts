@@ -11,23 +11,23 @@ describe('ActivitiesController', () => {
       data: [
         {
           id: 25651,
-          title: "German Tour: Parliament Quarter & Reichstag glass dome",
+          title: 'German Tour: Parliament Quarter & Reichstag glass dome',
           price: 14,
-          currency: "$",
+          currency: '$',
           rating: 4.8,
           specialOffer: false,
           supplier: {
             id: 1,
-            name: "John Doe",
-            address: "123 Main St",
-            zip: "12345",
-            city: "Anytown",
-            country: "USA",
+            name: 'John Doe',
+            address: '123 Main St',
+            zip: '12345',
+            city: 'Anytown',
+            country: 'USA',
           },
         },
       ],
       total: 1,
-      hash: 'somehashvalue'
+      hash: 'somehashvalue',
     }),
   };
 

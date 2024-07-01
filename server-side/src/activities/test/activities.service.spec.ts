@@ -9,20 +9,53 @@ describe('ActivitiesService', () => {
   let service: ActivitiesService;
 
   beforeAll(() => {
-    const activitiesPath = path.resolve(__dirname, '../../data/activities.json');
+    const activitiesPath = path.resolve(
+      __dirname,
+      '../../data/activities.json',
+    );
     const suppliersPath = path.resolve(__dirname, '../../data/suppliers.json');
 
     (fs.readFileSync as jest.Mock).mockImplementation((filePath: string) => {
       if (filePath === activitiesPath) {
         return JSON.stringify([
-          { id: 1, title: 'Test Activity 1', price: 10, currency: '$', rating: 4.5, specialOffer: false, supplierId: 1 },
-          { id: 2, title: 'Test Activity 2', price: 20, currency: '$', rating: 4.7, specialOffer: true, supplierId: 2 },
+          {
+            id: 1,
+            title: 'Test Activity 1',
+            price: 10,
+            currency: '$',
+            rating: 4.5,
+            specialOffer: false,
+            supplierId: 1,
+          },
+          {
+            id: 2,
+            title: 'Test Activity 2',
+            price: 20,
+            currency: '$',
+            rating: 4.7,
+            specialOffer: true,
+            supplierId: 2,
+          },
         ]);
       }
       if (filePath === suppliersPath) {
         return JSON.stringify([
-          { id: 1, name: 'Supplier 1', address: 'Address 1', zip: 'Zip 1', city: 'City 1', country: 'Country 1' },
-          { id: 2, name: 'Supplier 2', address: 'Address 2', zip: 'Zip 2', city: 'City 2', country: 'Country 2' },
+          {
+            id: 1,
+            name: 'Supplier 1',
+            address: 'Address 1',
+            zip: 'Zip 1',
+            city: 'City 1',
+            country: 'Country 1',
+          },
+          {
+            id: 2,
+            name: 'Supplier 2',
+            address: 'Address 2',
+            zip: 'Zip 2',
+            city: 'City 2',
+            country: 'Country 2',
+          },
         ]);
       }
     });

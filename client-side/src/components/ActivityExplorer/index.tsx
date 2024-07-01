@@ -6,7 +6,7 @@ import { SearchBar } from '../SearchBar';
 import { Notification } from '../Notification';
 import './style.scss';
 
-export const ActivityExplorer: React.FC = () => {
+export const ActivityExplorer = () => {
   const {
     activities,
     totalActivities,
@@ -24,7 +24,7 @@ export const ActivityExplorer: React.FC = () => {
   return (
     <div className="content-container">
       <Header />
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} currentSearchTerm={search} />
       <main className="activities-container">
         {loading ? (
           <div className="loading">Loading activities...</div>

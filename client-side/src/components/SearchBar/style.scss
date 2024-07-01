@@ -3,7 +3,7 @@
 .search-bar {
   margin: 20px 20px;
   display: flex;
-
+  flex-direction: column;
   input {
     width: 100%;
     padding: 10px;
@@ -17,5 +17,46 @@
       outline: none;
       border-color: $tertiary-color;
     }
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: $tertiary-color;
+    color: $text-color;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($tertiary-color, 10%);
+    }
+
+    &:last-child {
+      margin-left: auto;
+    }
+
+    &.clear-button {
+      background-color: $secondary-color;
+
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+      }
+    }
+  }
+
+  .input-container {
+    display: flex;
+    gap: 4px;
+  }
+
+  .search-term-indicator-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 4px;
+    margin-top: 4px;
   }
 }

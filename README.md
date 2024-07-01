@@ -59,18 +59,10 @@ activities-search-application
 
 ## Assumptions
 
-- **Static Data**: Activities and suppliers data are static and do not change frequently.
+- **Static Data**: Activities and suppliers data are static or do not change frequently.
 - **Simplified Supplier Info**: Supplier information is embedded directly into the activity response for simplicity. This can be normalized in a more complex system.
 - **Search Functionality**: The search functionality is case-insensitive and matches any part of the activity title.
 - **Backend Availability**: Assumes that the backend will be available most of the time. The caching mechanism is a fallback to handle temporary outages.
-
-## Future Improvements
-
-- **Database Integration**: Replace JSON file storage with a database to handle dynamic data.
-- **Advanced Search**: Implement more advanced search functionality, including filtering by price, rating, and special offers.
-- **Improved Error Handling**: More comprehensive error handling and user feedback mechanisms.
-- **Security**: Implement authentication and authorization for secure access to the API.
-- **Performance Optimization**: Optimize performance for handling large datasets and high traffic.
 
 ## Running Tests
 
@@ -91,3 +83,14 @@ To run the tests for the frontend, use the following command:
 cd client-side
 yarn test
 ```
+
+## For Reviewer 
+
+Most of the work is done on the front-end side since the position is more front-end foucsed for the filtering logic it works on both back-end and front-end (it works with the back-end by default and it falls back to the front-end in case of a disconnection and uses the cached data to search)
+
+## Some Future Improvements
+
+- **Advanced Search**: Implement more advanced search functionality, including filtering by price, rating, and special offers.
+- **Improved Error Handling**: More comprehensive error handling.
+- **Testing**: More test coverage.
+- **Responsiveness**: The UI is usable and responsive on all screens, however not the best UX so this can be improved.

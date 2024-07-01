@@ -61,7 +61,7 @@ describe('ActivityExplorer', () => {
 
     const input = screen.getByPlaceholderText(/Search activities/i);
     fireEvent.change(input, { target: { value: 'Non-existent Activity' } });
-
+    fireEvent.submit(screen.getByRole('search'));
     await waitFor(() => {
       expect(
         screen.getByText(/No activity titles match your search/i)

@@ -1,4 +1,4 @@
-import React, {
+import {
   createContext,
   useState,
   useContext,
@@ -29,9 +29,7 @@ const ActivityContext = createContext<ActivityContextProps | undefined>(
   undefined
 );
 
-export const ActivityProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+export const ActivityProvider = ({ children }: { children: ReactNode }) => {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [totalActivities, setTotalActivities] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
